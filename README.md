@@ -1,6 +1,5 @@
 # Face Detection
 
-![Face Detection](face_detection_demo.gif)
 
 ## Description
 
@@ -12,9 +11,6 @@ Face Detection is a Python script that uses OpenCV's pre-trained face cascade to
 - Drawn rectangles around the detected faces
 - Simple and easy-to-understand Python code
 
-## Demo
-
-![Face Detection Demo](face_detection_demo.gif)
 
 ## Dependencies
 
