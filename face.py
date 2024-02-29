@@ -4,8 +4,16 @@ face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_fronta
 
 video_capture = cv2.VideoCapture(0)
 
+if not video_capture.isOpened():
+    print("Error: Unable to open the webcam.")
+    exit()
+
 while True:
     ret, frame = video_capture.read()
+
+    if not ret:
+        print("Error: Unable to read frame from the webcam.")
+        break
 
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
@@ -16,7 +24,7 @@ while True:
 
     cv2.imshow('Face Detection', frame)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(30) & 0xFF == ord('q'):
         break
 
 video_capture.release()
